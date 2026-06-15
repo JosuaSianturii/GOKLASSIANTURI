@@ -1,6 +1,7 @@
 import { useState } from "react";
 import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
 import profilePhoto from "@assets/image_1781497788089.png";
+import klevePhoto from "@assets/image_1781498894811.png";
 import church1Photo from "@assets/image_1781495662126.png";
 import church2Photo from "@assets/image_1781497366654.png";
 import church3Photo from "@assets/image_1781497416836.png";
@@ -435,18 +436,18 @@ function AppContent() {
             <ScrollReveal>
               <div className="border border-neutral-900 bg-neutral-950/40 p-6 space-y-6 hover:border-neutral-700 transition-colors group">
                 <div className="overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800" 
-                    alt="Komunitas Pemuda" 
-                    className="w-full h-48 object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  <img
+                    src={klevePhoto}
+                    alt="Kerja Sama GKPI Silindung-Kleve"
+                    className="w-full h-48 object-cover object-top grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="inline-block text-[10px] uppercase bg-neutral-900 text-[#D4AF37] px-3 py-1.5 font-mono tracking-wider">
-                  Inovasi Pelayanan
+                  Kolaborasi Internasional
                 </div>
-                <h3 className="text-xl font-serif-sacred font-bold text-white">Revitalisasi Komunitas Pemuda</h3>
+                <h3 className="text-xl font-serif-sacred font-bold text-white">Turut Serta dalam Kerja Sama GKPI Silindung-Kleve</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">
-                  Merintis kembali persekutuan pemuda kota yang sempat vakum dengan menyusun kurikulum studi apologetika kontekstual, melatih 15 pemimpin sel baru dalam kurun waktu satu tahun.
+                  Berpartisipasi aktif dalam program kolaborasi antara Pemuda GKPI Silindung dengan jemaat pemuda gereja mitra di Kleve, Jerman — mempererat persekutuan lintas budaya dan memperluas wawasan iman dalam semangat kesatuan tubuh Kristus yang universal.
                 </p>
               </div>
             </ScrollReveal>
