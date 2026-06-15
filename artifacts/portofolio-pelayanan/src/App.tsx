@@ -55,7 +55,6 @@ function AppContent() {
     { name: "Beranda", href: "#home" },
     { name: "Tentang Saya", href: "#profile" },
     { name: "Tempat Melayani", href: "#about" },
-    { name: "Filosofi & Teologi", href: "#philosophy" },
     { name: "Khotbah & Ajar", href: "#sermons" },
     { name: "Rekam Jejak", href: "#portfolio" },
   ];
@@ -382,42 +381,6 @@ function AppContent() {
                     <span className="text-[10px] text-[#D4AF37]/70 font-mono">— Yohanes 15:5</span>
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* Philosophy Section */}
-        <section id="philosophy" className="py-24 px-6 md:px-16 lg:px-24">
-          <ScrollReveal>
-            <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
-              — Pondasi Doktrin
-            </div>
-            <h2 className="text-3xl font-syne font-bold uppercase mb-12">Filosofi & Pandangan Teologis</h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ScrollReveal>
-              <div className="p-6 border border-neutral-900 bg-neutral-950/40 space-y-4 h-full hover:border-neutral-700 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6">
-                  <FaBible size={20} />
-                </div>
-                <h3 className="text-lg font-serif-sacred font-bold text-white">Sikap dan Pandangan Doktrinal</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
-                  Memegang teguh Inerransi dan Infallibilitas Alkitab sebagai otoritas tertinggi kehidupan. Doktrin keselamatan berpusat penuh pada anugerah soliter melalui iman kepada Yesus Kristus (Sola Gratia, Sola Fide, Solus Christus).
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal className="delay-100">
-              <div className="p-6 border border-neutral-900 bg-neutral-950/40 space-y-4 h-full hover:border-neutral-700 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] mb-6">
-                  <FaHandHoldingHeart size={20} />
-                </div>
-                <h3 className="text-lg font-serif-sacred font-bold text-white">Pendekatan Gaya Penggembalaan</h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
-                  Mengutamakan pendekatan konseling pastoral yang empati namun alkitabiah. Menyelesaikan konflik jemaat mengacu pada prinsip restorasi kasih Matius 18, membangun pemuridan multiplikasi, serta kepemimpinan pelayan (servant leadership).
-                </p>
               </div>
             </ScrollReveal>
           </div>
