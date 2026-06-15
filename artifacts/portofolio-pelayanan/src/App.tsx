@@ -222,7 +222,7 @@ function AppContent() {
                 <div className="mt-6 space-y-1 pl-1">
                   <div className="text-[10px] font-mono uppercase tracking-widest text-neutral-500">Pendeta Gereja GKPI</div>
                   <div className="text-white font-syne font-bold text-lg uppercase tracking-wide">Pdt. Goklas Sianturi</div>
-                  <div className="text-[#D4AF37] text-xs font-mono">M.Th. · Ditahbiskan 2013</div>
+                  <div className="text-[#D4AF37] text-xs font-mono">S.Th. · Ditahbiskan 2013</div>
                 </div>
               </ScrollReveal>
             </div>
@@ -247,7 +247,7 @@ function AppContent() {
                     Kehidupan Keluarga <span className="italic text-neutral-500 font-serif-sacred text-sm tracking-normal normal-case">(1 Timotius 3:4-5)</span>
                   </h3>
                   <p className="text-neutral-400 text-sm leading-relaxed">
-                    Melayani bersama istri tercinta, Natalia, dan dikaruniai dua orang anak. Kami percaya bahwa keluarga adalah ladang penggembalaan pertama dan utama sebelum kami melangkah untuk memimpin jemaat di rumah Tuhan.
+                    Melayani bersama istri tercinta, <span className="text-white font-medium">Roselina Panjaitan</span>, dan dikaruniai seorang putra, <span className="text-white font-medium">Josua Sianturi</span>. Kami percaya bahwa keluarga adalah ladang penggembalaan pertama dan utama sebelum kami melangkah untuk memimpin jemaat di rumah Tuhan.
                   </p>
                 </div>
               </ScrollReveal>
@@ -258,16 +258,11 @@ function AppContent() {
                   <h3 className="text-xs uppercase font-bold tracking-widest text-[#D4AF37] border-b border-neutral-900 pb-3">
                     Edukasi & Otoritas Teologi
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                  <div className="text-xs">
                     <div>
-                      <div className="text-neutral-500 font-mono mb-1">2018 — 2021</div>
-                      <div className="text-white text-sm font-medium">Magister Theologiae (M.Th.)</div>
-                      <div className="text-neutral-400">Sekolah Tinggi Teologi Internasional</div>
-                    </div>
-                    <div>
-                      <div className="text-neutral-500 font-mono mb-1">2012 — 2016</div>
+                      <div className="text-neutral-500 font-mono mb-1">1999 — 2001</div>
                       <div className="text-white text-sm font-medium">Sarjana Teologi (S.Th.)</div>
-                      <div className="text-neutral-400">Institut Alkitab Nusantara</div>
+                      <div className="text-neutral-400">STAKPN Tarutung</div>
                     </div>
                   </div>
                   <div className="pt-4 border-t border-neutral-900">
