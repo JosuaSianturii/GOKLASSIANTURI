@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
+import profilePhoto from "@assets/image_1781497788089.png";
 import church1Photo from "@assets/image_1781495662126.png";
 import church2Photo from "@assets/image_1781497366654.png";
 import church3Photo from "@assets/image_1781497416836.png";
@@ -212,7 +213,7 @@ function AppContent() {
                   <div className="absolute inset-0 border border-[#D4AF37]/20 translate-x-3 translate-y-3 z-0 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
                   <div className="w-full h-[380px] bg-neutral-900 overflow-hidden relative z-10">
                     <img
-                      src={pastorPhoto}
+                      src={profilePhoto}
                       alt="Pdt. Goklas Sianturi"
                       className="w-full h-full object-cover object-top grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
                     />
