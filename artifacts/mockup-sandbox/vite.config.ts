@@ -19,8 +19,7 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-// Ubah kode yang melempar error menjadi nilai default '/'
-const basePath = process.env.BASE_PATH || '/';
+const basePath = process.env.BASE_PATH;
 
 if (!basePath) {
   throw new Error(
