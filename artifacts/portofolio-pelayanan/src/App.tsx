@@ -52,6 +52,7 @@ function AppContent() {
 
   const navLinks = [
     { name: "Beranda", href: "#home" },
+    { name: "Tentang Saya", href: "#profile" },
     { name: "Tempat Melayani", href: "#about" },
     { name: "Filosofi & Teologi", href: "#philosophy" },
     { name: "Khotbah & Ajar", href: "#sermons" },
@@ -197,6 +198,86 @@ function AppContent() {
                 </a>
               </ScrollReveal>
             </div>
+          </div>
+        </section>
+
+        {/* Profile / Pengenalan Diri Section */}
+        <section id="profile" className="py-24 px-6 md:px-16 lg:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+            {/* Foto + Identitas */}
+            <div className="lg:col-span-4">
+              <ScrollReveal>
+                <div className="relative group">
+                  <div className="absolute inset-0 border border-[#D4AF37]/20 translate-x-3 translate-y-3 z-0 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
+                  <div className="w-full h-[380px] bg-neutral-900 overflow-hidden relative z-10">
+                    <img
+                      src={pastorPhoto}
+                      alt="Pdt. Goklas Sianturi"
+                      className="w-full h-full object-cover object-top grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                </div>
+                <div className="mt-6 space-y-1 pl-1">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-neutral-500">Pendeta Gereja GKPI</div>
+                  <div className="text-white font-syne font-bold text-lg uppercase tracking-wide">Pdt. Goklas Sianturi</div>
+                  <div className="text-[#D4AF37] text-xs font-mono">M.Th. · Ditahbiskan 2013</div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Narasi Pengenalan */}
+            <div className="lg:col-span-8 space-y-10">
+              <ScrollReveal>
+                <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-3">— Pengenalan Diri</div>
+                <h2 className="text-3xl font-syne font-bold uppercase mb-8">Tentang Saya</h2>
+
+                <div className="space-y-4 mb-10">
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-white border-b border-neutral-900 pb-2">
+                    Kesaksian Panggilan
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    Pertemuan pribadi dengan kasih karunia Tuhan di masa muda mengubah arah hidup saya sepenuhnya. Di tengah pergumulan karir sekuler, suara Tuhan menggema kuat melalui pelayanan mimbar jemaat mula-mula, menggerakkan hati saya untuk menyerahkan seluruh hidup ke dalam ladang pelayanan teologis formal demi memenangkan jiwa bagi Kristus.
+                  </p>
+                </div>
+
+                <div className="space-y-4 mb-10">
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-white border-b border-neutral-900 pb-2">
+                    Kehidupan Keluarga <span className="italic text-neutral-500 font-serif-sacred text-sm tracking-normal normal-case">(1 Timotius 3:4-5)</span>
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    Melayani bersama istri tercinta, Natalia, dan dikaruniai dua orang anak. Kami percaya bahwa keluarga adalah ladang penggembalaan pertama dan utama sebelum kami melangkah untuk memimpin jemaat di rumah Tuhan.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              {/* Kotak Pendidikan & Penahbisan */}
+              <ScrollReveal>
+                <div className="bg-neutral-950 border border-neutral-900 p-6 space-y-6">
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-[#D4AF37] border-b border-neutral-900 pb-3">
+                    Edukasi & Otoritas Teologi
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                    <div>
+                      <div className="text-neutral-500 font-mono mb-1">2018 — 2021</div>
+                      <div className="text-white text-sm font-medium">Magister Theologiae (M.Th.)</div>
+                      <div className="text-neutral-400">Sekolah Tinggi Teologi Internasional</div>
+                    </div>
+                    <div>
+                      <div className="text-neutral-500 font-mono mb-1">2012 — 2016</div>
+                      <div className="text-white text-sm font-medium">Sarjana Teologi (S.Th.)</div>
+                      <div className="text-neutral-400">Institut Alkitab Nusantara</div>
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t border-neutral-900">
+                    <div className="text-[#D4AF37] font-mono uppercase tracking-wider text-[10px] mb-1">Status Penahbisan</div>
+                    <div className="text-white text-sm font-medium">Ditahbiskan sebagai Pendeta Penuh</div>
+                    <div className="text-neutral-400 text-xs mt-1">Sinode GKPI — 2013</div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
           </div>
         </section>
 
