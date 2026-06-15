@@ -49,6 +49,7 @@ function AppContent() {
 
   const navLinks = [
     { name: "Beranda", href: "#home" },
+    { name: "Tentang & Keluarga", href: "#about" },
     { name: "Filosofi & Teologi", href: "#philosophy" },
     { name: "Khotbah & Ajar", href: "#sermons" },
     { name: "Rekam Jejak", href: "#portfolio" },
@@ -191,6 +192,74 @@ function AppContent() {
                 >
                   Mengenal Lebih Dekat &rarr;
                 </a>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-24 px-6 md:px-16 lg:px-24 bg-neutral-950/20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-7">
+              <ScrollReveal>
+                <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
+                  — Penggembala & Keluarga
+                </div>
+                <h2 className="text-3xl font-syne font-bold uppercase mb-12">Tentang Saya</h2>
+
+                <div className="mb-10">
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-white border-b border-neutral-900 pb-2 mb-4">
+                    Kesaksian Panggilan
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    Pertemuan pribadi dengan kasih karunia Tuhan di masa muda mengubah arah hidup saya sepenuhnya. Di tengah pergumulan karir sekuler, suara Tuhan menggema kuat melalui pelayanan mimbar jemaat mula-mula, menggerakkan hati saya untuk menyerahkan seluruh hidup ke dalam ladang pelayanan teologis formal demi memenangkan jiwa bagi Kristus.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-white border-b border-neutral-900 pb-2 mb-4">
+                    Kehidupan Keluarga <span className="italic text-neutral-500 font-serif-sacred text-sm tracking-normal normal-case">(1 Timotius 3:4-5)</span>
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    Melayani bersama istri tercinta, Natalia, dan dikaruniai dua orang anak. Kami percaya bahwa keluarga adalah ladang penggembalaan pertama dan utama sebelum kami melangkah untuk memimpin jemaat di rumah Tuhan.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <div className="lg:col-span-5">
+              <ScrollReveal>
+                <div className="bg-neutral-950 border border-neutral-900 p-6 space-y-6">
+                  <h3 className="text-xs uppercase font-bold tracking-widest text-[#D4AF37] border-b border-neutral-900 pb-3">
+                    Edukasi & Otoritas Teologi
+                  </h3>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-neutral-500 font-mono text-xs mb-1">2018 — 2021</div>
+                      <div className="text-white text-sm font-medium">Magister Theologiae (M.Th.)</div>
+                      <div className="text-neutral-400 text-xs">Sekolah Tinggi Teologi Internasional</div>
+                    </div>
+                    
+                    <div>
+                      <div className="text-neutral-500 font-mono text-xs mb-1">2012 — 2016</div>
+                      <div className="text-white text-sm font-medium">Sarjana Teologi (S.Th.)</div>
+                      <div className="text-neutral-400 text-xs">Institut Alkitab Nusantara</div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-neutral-900">
+                    <div className="text-[#D4AF37] font-mono uppercase tracking-wider text-[10px] mb-1">
+                      Status Penahbisan
+                    </div>
+                    <div className="text-white text-sm font-medium">
+                      Ditahbiskan sebagai Pendeta Penuh
+                    </div>
+                    <div className="text-neutral-400 text-xs mt-1">
+                      Sinode Gereja Kristen Kebenaran (14 Agustus 2022)
+                    </div>
+                  </div>
+                </div>
               </ScrollReveal>
             </div>
           </div>
