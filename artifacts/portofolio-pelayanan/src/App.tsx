@@ -388,60 +388,38 @@ function AppContent() {
 
         {/* Sermons Section */}
         <section id="sermons" className="py-24 px-6 md:px-16 lg:px-24 bg-neutral-950/10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-5">
-              <ScrollReveal>
-                <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
-                  — Eksposisi Firman
-                </div>
-                <h2 className="text-3xl font-syne font-bold uppercase mb-6">Khotbah & Materi Pengajaran</h2>
-                <p className="text-neutral-400 text-sm leading-relaxed mb-8">
-                  Akses rekaman khotbah ekspositori terbaru dan unduh berkas modul pembelajaran teologi praktis untuk kelas katekisasi maupun pemuridan mandiri.
-                </p>
-
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-4 border border-neutral-900 bg-black group hover:border-neutral-700 transition-colors">
-                    <span className="text-xs text-neutral-300">Modul Pemuridan Dasar Kristen.pdf</span>
-                    <a href="#" className="flex items-center space-x-2 text-[#D4AF37] text-xs font-medium group-hover:underline">
-                      <span>Unduh</span>
-                      <FaDownload size={10} />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between p-4 border border-neutral-900 bg-black group hover:border-neutral-700 transition-colors">
-                    <span className="text-xs text-neutral-300">Diktat Katekisasi Doktrin Gereja.pdf</span>
-                    <a href="#" className="flex items-center space-x-2 text-[#D4AF37] text-xs font-medium group-hover:underline">
-                      <span>Unduh</span>
-                      <FaDownload size={10} />
-                    </a>
-                  </div>
-                </div>
-              </ScrollReveal>
+          <ScrollReveal>
+            <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
+              — Eksposisi Firman
             </div>
-
-            <div className="lg:col-span-7">
-              <ScrollReveal>
-                <div className="w-full border border-neutral-800 bg-black p-2 rounded-sm shadow-xl">
-                  <div className="relative pb-[56.25%] h-0 overflow-hidden bg-neutral-900 rounded-sm">
-                    <iframe 
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                      title="YouTube video player"
-                      className="absolute top-0 left-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  <div className="flex justify-between items-center mt-3 px-2 pb-1">
-                    <div className="flex items-center text-neutral-400 font-mono text-xs">
-                      <span className="text-[#D4AF37] mr-2">▶</span> Seri Khotbah Efesus: Hidup dalam Kristus
-                    </div>
-                    <div className="text-neutral-500 font-mono text-xs">
-                      Durasi: 45 Menit
-                    </div>
-                  </div>
+            <h2 className="text-3xl font-syne font-bold uppercase mb-10">Khotbah & Materi Pengajaran</h2>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="w-full border border-neutral-800 bg-black p-2 rounded-sm shadow-xl max-w-4xl mx-auto">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden bg-neutral-900 rounded-sm">
+                <iframe
+                  src="https://www.youtube.com/embed/rL3jfn2P2J8"
+                  title="Khotbah Pdt. Goklas Sianturi"
+                  className="absolute top-0 left-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="flex justify-between items-center mt-3 px-2 pb-1">
+                <div className="flex items-center text-neutral-400 font-mono text-xs">
+                  <span className="text-[#D4AF37] mr-2">▶</span> Khotbah Pdt. Goklas Sianturi
                 </div>
-              </ScrollReveal>
+                <a
+                  href="https://youtu.be/rL3jfn2P2J8"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#D4AF37] text-xs font-mono hover:underline"
+                >
+                  Tonton di YouTube ↗
+                </a>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </section>
 
         {/* Portfolio Section */}
