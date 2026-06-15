@@ -489,27 +489,8 @@ function AppContent() {
 
         {/* Contact Section */}
         <section id="contact" className="py-24 px-6 md:px-16 lg:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-5">
-              <ScrollReveal>
-                <div className="text-[#D4AF37] text-xs uppercase tracking-[0.3em] mb-4">
-                  — Validasi Rekan
-                </div>
-                <h2 className="text-3xl font-syne font-bold uppercase mb-8">Rekomendasi</h2>
-                
-                <div className="p-6 border border-neutral-900 bg-neutral-950 relative">
-                  <div className="text-[#D4AF37] text-4xl font-serif-sacred absolute top-4 left-4 opacity-20">"</div>
-                  <p className="italic text-neutral-400 font-serif-sacred text-sm leading-relaxed relative z-10 pt-4">
-                    Beliau memiliki integritas doktrinal yang kokoh dipadukan dengan kepekaan pastoral yang mendalam saat mendampingi jemaat melewati krisis.
-                  </p>
-                  <span className="not-italic text-[10px] font-sans font-medium uppercase tracking-wider text-white block mt-6 border-t border-neutral-800 pt-4">
-                    — Pdt. Dr. Abraham Silas (Ketua Sinode Kebenaran)
-                  </span>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            <div className="lg:col-span-7">
+          <div className="max-w-2xl">
+            <div>
               <ScrollReveal>
                 <div className="bg-neutral-950 border border-neutral-900 p-8">
                   <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-8 border-b border-neutral-800 pb-4">
