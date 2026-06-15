@@ -1,7 +1,7 @@
 import { useState } from "react";
 import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
 import profilePhoto from "@assets/image_1781497788089.png";
-import klevePhoto from "@assets/image_1781498894811.png";
+import klevePhoto from "@assets/image_1781499129961.png";
 import church1Photo from "@assets/image_1781495662126.png";
 import church2Photo from "@assets/image_1781497366654.png";
 import church3Photo from "@assets/image_1781497416836.png";
