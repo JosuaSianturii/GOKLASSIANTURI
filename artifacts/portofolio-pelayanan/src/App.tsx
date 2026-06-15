@@ -1,4 +1,5 @@
 import { useState } from "react";
+import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -153,8 +154,8 @@ function AppContent() {
               <div className="absolute inset-0 border border-[#D4AF37]/20 translate-x-3 translate-y-3 z-0 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
               <div className="w-full h-[450px] md:h-[520px] bg-neutral-900 z-10 relative overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Pdt. Emmanuel Vance" 
+                  src={pastorPhoto} 
+                  alt="Pdt. Goklas Sianturi" 
                   className="w-full h-full object-cover object-top grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
                 />
               </div>
@@ -168,8 +169,8 @@ function AppContent() {
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-syne font-extrabold uppercase leading-none tracking-tight mb-8">
-                  PDT. EMMANUEL<br/>
-                  <span className="text-outline">VANCE</span>
+                  PDT. GOKLAS<br/>
+                  <span className="text-outline">SIANTURI</span>
                 </h1>
                 
                 <p className="text-neutral-400 font-light text-sm md:text-base max-w-xl leading-relaxed mb-8">
@@ -178,10 +179,10 @@ function AppContent() {
 
                 <div className="border-l-2 border-[#D4AF37] pl-4 my-8">
                   <p className="italic text-sm text-neutral-300 font-serif-sacred">
-                    "Tetapi kuasailah dirimu dalam segala hal, sabarlah menderita, lakukanlah pekerjaan pemberita Injil dan tunaikanlah tugas pelayananmu!"
+                    "sama seperti Anak Manusia datang bukan untuk dilayani, melainkan untuk melayani dan untuk memberikan nyawa-Nya menjadi tebusan bagi banyak orang."
                   </p>
                   <span className="text-[#D4AF37] block mt-2 font-sans font-medium text-xs not-italic">
-                    — 2 Timotius 4:5
+                    — Matius 20:28
                   </span>
                 </div>
 
