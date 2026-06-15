@@ -2,6 +2,7 @@ import { useState } from "react";
 import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
 import profilePhoto from "@assets/image_1781497788089.png";
 import klevePhoto from "@assets/image_1781499129961.png";
+import aksiSosialPhoto from "@assets/image_1781499363925.png";
 import church1Photo from "@assets/image_1781495662126.png";
 import church2Photo from "@assets/image_1781497366654.png";
 import church3Photo from "@assets/image_1781497416836.png";
@@ -455,18 +456,18 @@ function AppContent() {
             <ScrollReveal className="delay-100">
               <div className="border border-neutral-900 bg-neutral-950/40 p-6 space-y-6 hover:border-neutral-700 transition-colors group">
                 <div className="overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1469571486040-4bd94194c1b2?auto=format&fit=crop&q=80&w=800" 
-                    alt="Aksi Sosial" 
-                    className="w-full h-48 object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  <img
+                    src={aksiSosialPhoto}
+                    alt="Aksi Sosial Sembako GKPI Parbubu"
+                    className="w-full h-48 object-cover object-top grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="inline-block text-[10px] uppercase bg-neutral-900 text-[#D4AF37] px-3 py-1.5 font-mono tracking-wider">
-                  Dampak Eksternal
+                  Aksi Sosial
                 </div>
-                <h3 className="text-xl font-serif-sacred font-bold text-white">Aksi Sosial & Transformasi Desa Terpadu</h3>
+                <h3 className="text-xl font-serif-sacred font-bold text-white">Pelayanan Sembako bagi Jemaat GKPI Parbubu</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed">
-                  Menggerakkan sinergi jemaat lokal untuk penyediaan fasilitas sanitasi air bersih dan klinik pengobatan gratis berkala bagi masyarakat prasejahtera di wilayah lingkar luar pelayanan.
+                  Di tengah pandemi Covid-19, jemaat GKPI Parbubu menghadapi kesulitan memperoleh bahan pokok. Sebagai bentuk kepedulian pastoral, diselenggarakan aksi sosial pembagian sembako bagi seluruh jemaat — wujud nyata kasih yang melayani jiwa sekaligus kebutuhan hidup.
                 </p>
               </div>
             </ScrollReveal>
