@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pelayanan & Penggembalaan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Teduh/Teologis) & Syne/Inter (Modern/Wibawa) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #070707;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-serif-sacred {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+        /* Efek teks outline tegas terinspirasi langsung dari image_f40016.png */
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+        }
+        .text-outline:hover {
+            -webkit-text-stroke: 1px #D4AF37;
+            transition: all 0.4s ease;
+        }
+        /* Kustomisasi scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070707;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 2px;
+        }
+        /* State Animasi Scroll */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <!-- Efek tekstur kertas halus samar pada background -->
+    <div class="fixed inset-0 pointer-events-none opacity-[0.015] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px] z-50"></div>
+
+    <!-- SIDEBAR KIRI: Navigasi Ikonis & Sosmed Persis Gaya image_f40016.png -->
+    <aside class="fixed left-0 top-0 h-screen w-[80px] md:w-[100px] bg-[#030303] border-r border-neutral-900 flex flex-col justify-between items-center py-8 z-40">
+        <!-- Monogram Pelayanan -->
+        <a href="#home" class="text-2xl font-syne font-bold text-[#D4AF37] tracking-tighter hover:scale-105 transition-transform">
+            Ω
+        </a>
+        
+        <!-- Ikon Sosial Media / Akses Cepat -->
+        <div class="flex flex-col gap-6 text-neutral-500">
+            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fa-solid fa-cross text-base"></i></a>
+            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-youtube text-base"></i></a>
+            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fa-brands fa-whatsapp text-base"></i></a>
+            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="fa-solid fa-envelope text-base"></i></a>
+        </div>
+
+        <!-- Teks Vertikal -->
+        <div class="rotate-180 writing-mode-vertical text-[9px] tracking-[0.3em] uppercase text-neutral-600 font-medium whitespace-nowrap" style="writing-mode: vertical-lr;">
+            SOLI DEO GLORIA &copy; 2026
+        </div>
+    </aside>
+
+    <!-- KONTEN UTAMA (Bergeser ke kanan demi ruang Sidebar) -->
+    <div class="pl-[80px] md:pl-[100px] w-full">
+        
+        <!-- NAVBAR ATAS -->
+        <header class="w-full h-24 flex justify-between items-center px-6 md:px-12 sticky top-0 bg-[#070707]/90 backdrop-blur-md z-30 border-b border-neutral-900/40">
+            <div></div>
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-neutral-400">
+                <a href="#home" class="hover:text-[#D4AF37] transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-[#D4AF37] transition-colors">Tentang & Keluarga</a>
+                <a href="#philosophy" class="hover:text-[#D4AF37] transition-colors">Filosofi & Teologi</a>
+                <a href="#sermons" class="hover:text-[#D4AF37] transition-colors">Khotbah & Ajar</a>
+                <a href="#portfolio" class="hover:text-[#D4AF37] transition-colors">Rekam Jejak</a>
+                <a href="#contact" class="hover:text-[#D4AF37] transition-colors text-[#D4AF37]">Hubungi</a>
+            </nav>
+            <button class="lg:hidden text-neutral-400 hover:text-white" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </header>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-[#070707] z-50 flex flex-col justify-center items-center gap-6 uppercase tracking-widest text-base">
+            <button class="absolute top-8 right-8 text-2xl text-neutral-400" onclick="toggleMenu()">&times;</button>
+            <a href="#home" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Beranda</a>
+            <a href="#about" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Tentang & Keluarga</a>
+            <a href="#philosophy" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Filosofi & Teologi</a>
+            <a href="#sermons" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Khotbah & Ajar</a>
+            <a href="#portfolio" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Rekam Jejak</a>
+            <a href="#contact" onclick="toggleMenu()" class="hover:text-[#D4AF37]">Hubungi</a>
+        </div>
+
+        <!-- 1. HALAMAN BERANDA (HOME) -->
+        <section id="home" class="min-h-[calc(100vh-96px)] flex flex-col justify-center px-6 md:px-16 lg:px-24 py-12 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Foto Profil (Sesuai layout image 1: gelap, berwibawa, bersih) -->
+                <div class="lg:col-span-5 relative order-2 lg:order-1 scroll-reveal">
+                    <div class="absolute inset-0 border border-[#D4AF37]/20 translate-x-3 translate-y-3 z-0"></div>
+                    <div class="w-full h-[450px] md:h-[520px] bg-neutral-900 grayscale contrast-125 overflow-hidden relative z-10">
+                        <!-- Ganti URL gambar di bawah dengan foto formal/semi-formal Anda -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000" alt="Foto Pendeta" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+
+                <!-- Konten Teks Utama -->
+                <div class="lg:col-span-7 space-y-6 order-1 lg:order-2 z-20">
+                    <span class="text-xs font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">Salam Sejahtera, Selamat Datang</span>
+                    
+                    <!-- Tipografi nama besar bergaya outline -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-syne font-extrabold uppercase leading-none tracking-tight">
+                        PDT. EMMANUEL <br><span class="text-outline">VANCE</span>
+                    </h1>
+                    
+                    <!-- Pernyataan Panggilan (Call to Ministry) -->
+                    <p class="text-neutral-400 font-light text-sm md:text-base max-w-xl leading-relaxed">
+                        Dipanggil untuk memberitakan kebenaran Kristus yang transformatif, membangun iman jemaat yang berakar pada eksposisi Alkitab yang murni, serta menggembalakan dengan hati yang melayani demi kemuliaan Allah.
+                    </p>
+
+                    <!-- Ayat Alkitab Fondasi -->
+                    <blockquote class="border-l-2 border-[#D4AF37] pl-4 my-6 text-sm italic text-neutral-300 font-serif-sacred">
+                        "Tetapi kuasailah dirimu dalam segala hal, sabarlah menderita, lakukanlah pekerjaan pemberita Injil dan tunaikanlah tugas pelayananmu!" <span class="text-[#D4AF37] block mt-1 font-sans font-medium text-xs not-italic">— 2 Timotius 4:5</span>
+                    </blockquote>
+
+                    <div class="pt-2">
+                        <a href="#about" class="px-6 py-3 bg-[#D4AF37] text-black font-semibold text-xs uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                            Mengenal Lebih Dekat <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 mx-6 md:mx-16">
+
+        <!-- 2. TENTANG SAYA & KELUARGA (ABOUT ME) -->
+        <section id="about" class="py-24 px-6 md:px-16 lg:px-24 bg-neutral-950/20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-7 space-y-8 scroll-reveal">
+                    <div>
+                        <h2 class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] mb-2">— Penggembala & Keluarga</h2>
+                        <h3 class="text-3xl font-syne font-bold uppercase">Tentang Saya</h3>
+                    </div>
+
+                    <!-- Cerita Kesaksian (Testimony) -->
+                    <div class="space-y-4">
+                        <h4 class="text-xs uppercase font-bold tracking-widest text-white border-b border-neutral-900 pb-2">Kesaksian Panggilan</h4>
+                        <p class="text-sm text-neutral-300 leading-relaxed font-light">
+                            Pertemuan pribadi dengan kasih karunia Tuhan di masa muda mengubah arah hidup saya sepenuhnya. Di tengah pergumulan karir sekuler, suara Tuhan menggema kuat melalui pelayanan mimbar jemaat mula-mula, menggerakkan hati saya untuk menyerahkan seluruh hidup ke dalam ladang pelayanan teologis formal demi memenangkan jiwa bagi Kristus.
+                        </p>
+                    </div>
+
+                    <!-- Profil Keluarga -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 border-b border-neutral-900 pb-2">
+                            <h4 class="text-xs uppercase font-bold tracking-widest text-white">Kehidupan Keluarga</h4>
+                            <span class="text-[11px] font-serif-sacred text-neutral-500 italic">(1 Timotius 3:4-5)</span>
+                        </div>
+                        <p class="text-sm text-neutral-300 leading-relaxed font-light">
+                            Melayani bersama istri tercinta, Natalia, dan dikaruniai dua orang anak. Kami percaya bahwa keluarga adalah ladang penggembalaan pertama dan utama sebelum kami melangkah untuk memimpin jemaat di rumah Tuhan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riwayat Pendidikan & Penahbisan -->
+                <div class="lg:col-span-5 bg-neutral-950 border border-neutral-900 p-6 h-fit space-y-6 scroll-reveal">
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-[#D4AF37] border-b border-neutral-900 pb-3">Edukasi & Otoritas Teologi</h4>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div>
+                            <span class="text-neutral-500 font-mono block">2018 — 2021</span>
+                            <strong class="text-white block text-sm font-medium">Magister Theologiae (M.Th.)</strong>
+                            <span class="text-neutral-400">Sekolah Tinggi Teologi Internasional</span>
+                        </div>
+                        <div>
+                            <span class="text-neutral-500 font-mono block">2012 — 2016</span>
+                            <strong class="text-white block text-sm font-medium">Sarjana Teologi (S.Th.)</strong>
+                            <span class="text-neutral-400">Institut Alkitab Nusantara</span>
+                        </div>
+                        <div class="pt-2 border-t border-neutral-900">
+                            <span class="text-[#D4AF37] font-mono block uppercase tracking-wider text-[10px] mb-1">Status Penahbisan</span>
+                            <strong class="text-white block text-sm font-medium">Ditahbiskan sebagai Pendeta Penuh</strong>
+                            <span class="text-neutral-400">Sinode Gereja Kristen Kebenaran (14 Agustus 2022)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 mx-6 md:mx-16">
+
+        <!-- 3. FILOSOFI PELAYANAN & TEOLOGI -->
+        <section id="philosophy" class="py-24 px-6 md:px-16 lg:px-24">
+            <div class="mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] mb-2">— Pondasi Doktrin</h2>
+                <h3 class="text-3xl font-syne font-bold uppercase">Filosofi & Pandangan Teologis</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pandangan Teologis -->
+                <div class="p-6 border border-neutral-900 bg-neutral-950/40 space-y-4 scroll-reveal">
+                    <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37]">
+                        <i class="fa-solid fa-book-bible"></i>
+                    </div>
+                    <h4 class="text-lg font-serif-sacred font-bold text-white">Sikap dan Pandangan Doktrinal</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                        Memegang teguh Inerransi dan Infallibilitas Alkitab sebagai otoritas tertinggi kehidupan. Doktrin keselamatan berpusat penuh pada anugerah soliter melalui iman kepada Yesus Kristus (*Sola Gratia, Sola Fide, Solus Christus*).
+                    </p>
+                </div>
+
+                <!-- Gaya Penggembalaan -->
+                <div class="p-6 border border-neutral-900 bg-neutral-950/40 space-y-4 scroll-reveal">
+                    <div class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37]">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h4 class="text-lg font-serif-sacred font-bold text-white">Pendekatan Gaya Penggembalaan</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                        Mengutamakan pendekatan konseling pastoral yang empati namun alkitabiah. Menyelesaikan konflik jemaat mengacu pada prinsip restorasi kasih Matius 18, membangun pemuridan multiplikasi, serta kepemimpinan pelayan (*servant leadership*).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 mx-6 md:mx-16">
+
+        <!-- 4. GALERI KHOTBAH & PENGAJARAN (DENGAN EMBED YOUTUBE) -->
+        <section id="sermons" class="py-24 px-6 md:px-16 lg:px-24 bg-neutral-950/10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Sisi Kiri: Judul & Unduhan PDF Materi Ajar -->
+                <div class="lg:col-span-5 space-y-6 scroll-reveal">
+                    <div>
+                        <h2 class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] mb-2">— Eksposisi Firman</h2>
+                        <h3 class="text-3xl font-syne font-bold uppercase">Khotbah & Materi Pengajaran</h3>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed font-light">
+                        Akses rekaman khotbah ekspositori terbaru dan unduh berkas modul pembelajaran teologi praktis untuk kelas katekisasi maupun pemuridan mandiri.
+                    </p>
+
+                    <!-- Materi Ajar PDF List -->
+                    <div class="space-y-2 pt-2">
+                        <h4 class="text-[10px] font-mono uppercase tracking-widest text-neutral-500">Bahan Ajar Tersedia (PDF)</h4>
+                        <div class="flex items-center justify-between p-3 border border-neutral-900 bg-black text-xs">
+                            <span class="text-neutral-300 font-serif-sacred">Modul Pemuridan Dasar Kristen.pdf</span>
+                            <a href="#" class="text-[#D4AF37] hover:underline uppercase text-[10px] tracking-wider"><i class="fa-solid fa-download mr-1"></i> Unduh</a>
+                        </div>
+                        <div class="flex items-center justify-between p-3 border border-neutral-900 bg-black text-xs">
+                            <span class="text-neutral-300 font-serif-sacred">Diktat Katekisasi Doktrin Gereja.pdf</span>
+                            <a href="#" class="text-[#D4AF37] hover:underline uppercase text-[10px] tracking-wider"><i class="fa-solid fa-download mr-1"></i> Unduh</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: TEMPAT UNTUK MEMASUKKAN VIDEO YOUTUBE -->
+                <div class="lg:col-span-7 space-y-4 scroll-reveal">
+                    <div class="relative w-full border border-neutral-800 bg-black p-2">
+                        <!-- Kontainer Responsif Video YouTube -->
+                        <div class="relative pb-[56.25%] h-0 overflow-hidden w-full">
+                            <!-- Ganti ID video di tautan src (setelah embed/) dengan ID video YouTube pelayanan Anda -->
+                            <iframe class="absolute top-0 left-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500" 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    title="Sermon Video Presentation" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center text-xs font-mono text-neutral-500 px-1">
+                        <span><i class="fa-solid fa-play mr-2 text-[10px] text-[#D4AF37]"></i> Seri Khotbah Efesus: Hidup dalam Kristus</span>
+                        <span>Durasi: 45 Menit</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 mx-6 md:mx-16">
+
+        <!-- 5. REKAM JEJAK PELAYANAN (MINISTRY EXPERIENCE) -->
+        <section id="portfolio" class="py-24 px-6 md:px-16 lg:px-24">
+            <div class="mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] mb-2">— Portofolio Kepemimpinan</h2>
+                <h3 class="text-3xl font-syne font-bold uppercase">Rekam Jejak Program</h3>
+            </div>
+
+            <!-- Studi Kasus Program Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <div class="border border-neutral-900 bg-neutral-950/40 p-6 space-y-4 scroll-reveal">
+                    <div class="w-full h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800" alt="Revitalisasi Pemuda" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-[10px] uppercase bg-neutral-900 text-[#D4AF37] px-2 py-1 font-mono tracking-wider">Inovasi Pelayanan</span>
+                    <h4 class="text-lg font-serif-sacred font-bold text-white">Revitalisasi Komunitas Pemuda</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Merintis kembali persekutuan pemuda kota yang sempat vakum dengan menyusun kurikulum studi apologetika kontekstual, melatih 15 pemimpin sel baru dalam kurun waktu satu tahun.
+                    </p>
+                </div>
+
+                <div class="border border-neutral-900 bg-neutral-950/40 p-6 space-y-4 scroll-reveal">
+                    <div class="w-full h-48 bg-neutral-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1469571486040-4bd94194c1b2?auto=format&fit=crop&q=80&w=800" alt="Aksi Sosial" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-[10px] uppercase bg-neutral-900 text-[#D4AF37] px-2 py-1 font-mono tracking-wider">Dampak Eksternal</span>
+                    <h4 class="text-lg font-serif-sacred font-bold text-white">Aksi Sosial & Transformasi Desa Terpadu</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Menggerakkan sinergi jemaat lokal untuk penyediaan fasilitas sanitasi air bersih dan klinik pengobatan gratis berkala bagi masyarakat prasejahtera di wilayah lingkar luar pelayanan.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Statistik Pelayanan -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-neutral-900 text-center scroll-reveal">
+                <div class="p-4 bg-neutral-950">
+                    <div class="text-2xl md:text-3xl font-syne font-bold text-[#D4AF37]">12+</div>
+                    <div class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Tahun Pelayanan</div>
+                </div>
+                <div class="p-4 bg-neutral-950">
+                    <div class="text-2xl md:text-3xl font-syne font-bold text-white">40+</div>
+                    <div class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Pemimpin Sel Dilatih</div>
+                </div>
+                <div class="p-4 bg-neutral-950">
+                    <div class="text-2xl md:text-3xl font-syne font-bold text-white">3</div>
+                    <div class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Gereja Pos rintisan</div>
+                </div>
+                <div class="p-4 bg-neutral-950">
+                    <div class="text-2xl md:text-3xl font-syne font-bold text-[#D4AF37]">500+</div>
+                    <div class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Sesi Konseling Tuntas</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-neutral-900 mx-6 md:mx-16">
+
+        <!-- 6. REKOMENDASI & KONTAK (TESTIMONIALS & CONTACT) -->
+        <section id="contact" class="py-24 px-6 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Kutipan Rekomendasi Mentor -->
+                <div class="lg:col-span-5 space-y-6 scroll-reveal">
+                    <div>
+                        <h2 class="text-xs uppercase tracking-[0.3em] text-[#D4AF37] mb-2">— Validasi Rekan</h2>
+                        <h3 class="text-3xl font-syne font-bold uppercase">Rekomendasi</h3>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <div class="p-4 border border-neutral-900 bg-neutral-950 italic text-neutral-400 font-serif-sacred">
+                            "Beliau memiliki integritas doktrinal yang kokoh dipadukan dengan kepekaan pastoral yang mendalam saat mendampingi jemaat melewati krisis."
+                            <span class="block mt-2 not-italic text-[10px] font-sans font-medium uppercase tracking-wider text-white">— Pdt. Dr. Abraham Silas (Ketua Sinode Kebenaran)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulir Kontak Akses Pengurus Gereja -->
+                <div class="lg:col-span-7 bg-neutral-950 border border-neutral-900 p-6 md:p-8 scroll-reveal">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Hubungi via Formulir / Hubungan Cepat</h4>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Pesan Anda terkirim!');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Nama Instansi / Gereja</label>
+                                <input type="text" required class="w-full px-4 py-2.5 bg-neutral-900 border border-neutral-800 text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Email Korespondensi</label>
+                                <input type="email" required class="w-full px-4 py-2.5 bg-neutral-900 border border-neutral-800 text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] font-mono uppercase tracking-widest text-neutral-400">Isi Keperluan Pelayanan / Undangan</label>
+                            <textarea rows="4" required class="w-full px-4 py-2.5 bg-neutral-900 border border-neutral-800 text-sm text-white focus:outline-none focus:border-[#D4AF37] resize-none"></textarea>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <button type="submit" class="px-5 py-3 bg-[#D4AF37] text-black font-semibold text-xs uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                                Kirim Email <i class="fa-solid fa-paper-plane ml-1 text-[10px]"></i>
+                            </button>
+                            <!-- WhatsApp Business Redirect Button -->
+                            <a href="https://wa.me/628123456789" target="_blank" class="px-5 py-3 bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs uppercase tracking-widest transition-colors flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-green-500"></i> WhatsApp Bisnis
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="w-full py-8 text-center text-[10px] text-neutral-600 border-t border-neutral-950 font-mono">
+            Pelayanan Penggembalaan Kristosentris &bull; Diperbarui Tahun 2026
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT KONTROLLER -->
+    <script>
+        // ANIMASI SCROLL REVEAL (Intersection Observer)
+        const obsOptions = { root: null, threshold: 0.1, rootMargin: "0px 0px -40px 0px" };
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('active'); }
+            });
+        }, obsOptions);
+        document.querySelectorAll('.scroll-reveal').forEach((el) => revealObserver.observe(el));
+
+        // MOBILE MENU TOGGLE
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
