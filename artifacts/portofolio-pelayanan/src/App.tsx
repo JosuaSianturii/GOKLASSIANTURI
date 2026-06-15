@@ -46,9 +46,12 @@ function AppContent() {
   const { register, handleSubmit, reset } = useForm();
   
   const onSubmit = (data: any) => {
+    const subject = encodeURIComponent(`Keperluan Pelayanan dari ${data.name}`);
+    const body = encodeURIComponent(`Nama / Instansi: ${data.name}\nEmail: ${data.email}\n\n${data.message}`);
+    window.open(`mailto:jsianturi31@gmail.com?subject=${subject}&body=${body}`, "_blank");
     toast({
-      title: "Pesan Anda terkirim!",
-      description: "Kami akan segera membalas email Anda.",
+      title: "Membuka aplikasi email...",
+      description: "Pesan Anda siap dikirim ke jsianturi31@gmail.com",
     });
     reset();
   };
@@ -79,7 +82,7 @@ function AppContent() {
         <div className="flex flex-col space-y-8 text-neutral-500">
           <a href="#philosophy" className="hover:text-[#D4AF37] transition-colors"><FaCross size={20} /></a>
           <a href="#sermons" className="hover:text-[#D4AF37] transition-colors"><FaYoutube size={20} /></a>
-          <a href="https://wa.me/628123456789" target="_blank" rel="noreferrer" className="hover:text-[#D4AF37] transition-colors"><FaWhatsapp size={20} /></a>
+          <a href="https://wa.link/tvb2sb" target="_blank" rel="noreferrer" className="hover:text-[#D4AF37] transition-colors"><FaWhatsapp size={20} /></a>
           <a href="#contact" className="hover:text-[#D4AF37] transition-colors"><FaEnvelope size={20} /></a>
         </div>
         
@@ -541,7 +544,7 @@ function AppContent() {
                       </button>
                       
                       <a 
-                        href="https://wa.me/628123456789" 
+                        href="https://wa.link/tvb2sb" 
                         target="_blank" 
                         rel="noreferrer"
                         className="px-8 py-3 bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs uppercase tracking-widest border border-neutral-800 transition-colors flex items-center justify-center space-x-2 flex-1 sm:flex-none"
