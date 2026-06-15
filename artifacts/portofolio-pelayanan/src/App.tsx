@@ -474,22 +474,14 @@ function AppContent() {
           </div>
 
           <ScrollReveal>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-neutral-900 pt-12">
+            <div className="grid grid-cols-2 gap-4 border-t border-neutral-900 pt-12 max-w-lg">
               <div className="p-6 bg-neutral-950 text-center flex flex-col justify-center border border-transparent hover:border-neutral-800 transition-colors">
-                <div className="text-3xl font-syne font-bold text-[#D4AF37] mb-2">12+</div>
+                <div className="text-3xl font-syne font-bold text-[#D4AF37] mb-2">13+</div>
                 <div className="text-[10px] uppercase tracking-widest text-neutral-500">Tahun Pelayanan</div>
               </div>
               <div className="p-6 bg-neutral-950 text-center flex flex-col justify-center border border-transparent hover:border-neutral-800 transition-colors">
-                <div className="text-3xl font-syne font-bold text-white mb-2">40+</div>
-                <div className="text-[10px] uppercase tracking-widest text-neutral-500">Pemimpin Sel Dilatih</div>
-              </div>
-              <div className="p-6 bg-neutral-950 text-center flex flex-col justify-center border border-transparent hover:border-neutral-800 transition-colors">
                 <div className="text-3xl font-syne font-bold text-white mb-2">3</div>
-                <div className="text-[10px] uppercase tracking-widest text-neutral-500">Gereja Pos Rintisan</div>
-              </div>
-              <div className="p-6 bg-neutral-950 text-center flex flex-col justify-center border border-transparent hover:border-neutral-800 transition-colors">
-                <div className="text-3xl font-syne font-bold text-[#D4AF37] mb-2">500+</div>
-                <div className="text-[10px] uppercase tracking-widest text-neutral-500">Sesi Konseling Tuntas</div>
+                <div className="text-[10px] uppercase tracking-widest text-neutral-500">Resort Jemaat Dilayani</div>
               </div>
             </div>
           </ScrollReveal>
