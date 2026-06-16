@@ -74,7 +74,6 @@ function AppContent() {
           backgroundSize: '24px 24px'
         }}
       />
-
       {/* Sidebar */}
       <div className="fixed left-0 top-0 bottom-0 w-[80px] md:w-[100px] bg-[#030303] border-r border-neutral-900 flex flex-col justify-between items-center py-8 z-40">
         <a href="#home" className="text-[#D4AF37] font-syne font-bold text-3xl hover:scale-110 transition-transform">Ω</a>
@@ -92,7 +91,6 @@ function AppContent() {
           </p>
         </div>
       </div>
-
       {/* Main Content Area */}
       <div className="pl-[80px] md:pl-[100px]">
         
@@ -226,7 +224,7 @@ function AppContent() {
                 <div className="mt-6 space-y-1 pl-1">
                   <div className="text-[10px] font-mono uppercase tracking-widest text-neutral-500">Pendeta Gereja GKPI</div>
                   <div className="text-white font-syne font-bold text-lg uppercase tracking-wide">Pdt. Goklas Sianturi</div>
-                  <div className="text-[#D4AF37] text-xs font-mono">S.Th. · Ditahbiskan 2013</div>
+                  <div className="text-[#D4AF37] text-xs font-mono">S.Th. · Ditahbiskan 2012</div>
                 </div>
               </ScrollReveal>
             </div>
