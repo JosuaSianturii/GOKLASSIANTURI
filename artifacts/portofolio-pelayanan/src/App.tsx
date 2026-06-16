@@ -270,7 +270,7 @@ function AppContent() {
                   <div className="pt-4 border-t border-neutral-900">
                     <div className="text-[#D4AF37] font-mono uppercase tracking-wider text-[10px] mb-1">Status Penahbisan</div>
                     <div className="text-white text-sm font-medium">Ditahbiskan sebagai Pendeta Penuh</div>
-                    <div className="text-neutral-400 text-xs mt-1">Sinode GKPI — 2013</div>
+                    <div className="text-neutral-400 text-xs mt-1">Sinode GKPI — 2012</div>
                   </div>
                 </div>
               </ScrollReveal>
