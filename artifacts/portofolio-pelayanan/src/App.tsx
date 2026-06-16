@@ -88,7 +88,7 @@ function AppContent() {
         
         <div className="flex-1 flex items-end pb-12">
           <p className="text-neutral-600 text-[10px] tracking-widest uppercase" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
-            Soli Deo Gloria © 2026
+            Josua Sianturi @2026
           </p>
         </div>
       </div>
