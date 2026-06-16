@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm --filter @workspace/portofolio-pelayanan run build",
+  "outputDirectory": "artifacts/portofolio-pelayanan/dist",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
