@@ -302,9 +302,7 @@ function AppContent() {
                     className="w-full h-full object-cover grayscale contrast-110 group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent"></div>
-                  <div className="absolute bottom-3 left-4 text-[#D4AF37] font-mono text-[10px] uppercase tracking-widest">
-                    2013 — 2018
-                  </div>
+                  <div className="absolute bottom-3 left-4 text-[#D4AF37] font-mono text-[10px] uppercase tracking-widest">2012 — 2018</div>
                 </div>
                 <div className="p-6 flex flex-col flex-1 space-y-3">
                   <div className="inline-block text-[10px] uppercase bg-neutral-900 text-[#D4AF37] px-2 py-1 font-mono tracking-wider w-fit">
