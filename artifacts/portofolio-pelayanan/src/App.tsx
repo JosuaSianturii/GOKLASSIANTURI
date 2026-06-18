@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import pasuPasuAudio from "@assets/pasu-pasu-hami.mp3";
 import pastorPhoto from "@assets/Gemini_Generated_Image_chlkl2chlkl2chlk_1781494753740.png";
 import profilePhoto from "@assets/image_1781497788089.png";
 import klevePhoto from "@assets/image_1781499129961.png";
@@ -18,12 +19,114 @@ import {
   FaBars, 
   FaDownload, 
   FaBible, 
-  FaHandHoldingHeart 
+  FaHandHoldingHeart,
+  FaPlay,
+  FaPause,
+  FaMusic
 } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useToast } from "@/hooks/use-toast";
 
 const queryClient = new QueryClient();
+
+function MusicPlayer() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.play().catch(() => setIsPlaying(false));
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying]);
+
+  const togglePlay = () => setIsPlaying((p) => !p);
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+      {/* Info card */}
+      {isExpanded && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          className="bg-[#0a0a0a] border border-neutral-800 px-4 py-3 max-w-[220px] text-right shadow-xl"
+        >
+          <div className="flex items-center justify-end gap-2 mb-1">
+            <FaMusic size={9} className="text-[#D4AF37]" />
+            <span className="text-[9px] font-mono uppercase tracking-widest text-[#D4AF37]">
+              Lagu Rohani
+            </span>
+          </div>
+          <p className="text-white text-[11px] font-semibold leading-snug">
+            Pasu Pasu Hami O Tuhan
+          </p>
+          <p className="text-neutral-500 text-[10px] mt-0.5">
+            B.E. HKBP No. 792
+          </p>
+          <p className="text-neutral-600 text-[9px] italic mt-0.5">
+            Pdt. Firdaus Hutasoit
+          </p>
+        </motion.div>
+      )}
+
+      {/* Disc + controls */}
+      <div className="flex items-center gap-3">
+        {/* Collapse toggle */}
+        <button
+          onClick={() => setIsExpanded((e) => !e)}
+          className="text-neutral-600 hover:text-[#D4AF37] transition-colors text-[10px] font-mono"
+        >
+          {isExpanded ? "▼" : "▲"}
+        </button>
+
+        {/* Spinning disc */}
+        <button
+          onClick={togglePlay}
+          className="relative w-16 h-16 rounded-full focus:outline-none group"
+          aria-label={isPlaying ? "Pause" : "Play"}
+        >
+          {/* Disc body */}
+          <motion.div
+            className="w-16 h-16 rounded-full bg-gradient-radial border border-neutral-700 shadow-2xl overflow-hidden flex items-center justify-center"
+            style={{
+              background: "conic-gradient(from 0deg, #1a1a1a 0%, #2a2a2a 25%, #111 50%, #222 75%, #1a1a1a 100%)",
+            }}
+            animate={{ rotate: isPlaying ? 360 : 0 }}
+            transition={
+              isPlaying
+                ? { repeat: Infinity, duration: 4, ease: "linear" }
+                : { duration: 0.3 }
+            }
+          >
+            {/* Grooves */}
+            <div className="absolute inset-0 rounded-full border border-neutral-800 m-1 opacity-40" />
+            <div className="absolute inset-0 rounded-full border border-neutral-800 m-3 opacity-30" />
+            <div className="absolute inset-0 rounded-full border border-neutral-800 m-5 opacity-20" />
+            {/* Gold center hole */}
+            <div className="w-4 h-4 rounded-full bg-[#D4AF37] z-10 flex items-center justify-center shadow-md">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#030303]" />
+            </div>
+          </motion.div>
+
+          {/* Play/pause overlay on hover */}
+          <div className="absolute inset-0 rounded-full bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            {isPlaying
+              ? <FaPause size={14} className="text-[#D4AF37]" />
+              : <FaPlay size={14} className="text-[#D4AF37] ml-0.5" />
+            }
+          </div>
+        </button>
+      </div>
+
+      <audio ref={audioRef} src={pasuPasuAudio} loop />
+    </div>
+  );
+}
 
 function ScrollReveal({ children, className = "" }: { children: React.ReactNode, className?: string }) {
   return (
@@ -570,6 +673,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <AppContent />
+        <MusicPlayer />
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
